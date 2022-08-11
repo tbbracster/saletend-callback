@@ -7,7 +7,7 @@ router.post("/", async function (req, res, next) {
   try {
     console.log('Send with', { inbox_id: req.body.inbox_id }, req.cookies);
     requestify.request(
-      `https://saletend-web-git-feature-inbox-bracster-software.vercel.app/api/inbox/fetchAndSaveInboxMessages`,
+      process.env.URL,
       {
         method: 'POST',
         body: { ...req.body },
