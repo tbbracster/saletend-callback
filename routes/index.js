@@ -10,7 +10,7 @@ router.post("/", async function (req, res, next) {
       `https://saletend-web-git-feature-inbox-bracster-software.vercel.app/api/inbox/fetchAndSaveInboxMessages`,
       {
         method: 'POST',
-        body: { inbox_id: req.body.inbox_id },
+        body: { ...req.body },
         headers: {
           'Content-Type': 'application/json',
         },
