@@ -5,7 +5,7 @@ const requestify = require("requestify");
 /* GET home page. */
 router.post("/", async function (req, res, next) {
   try {
-    console.log('Send with', { inbox_id: req.body.inbox_id }, req.cookies);
+    console.log('Send with', { inbox_id: req.body.inbox_id }, process.env.URL);
     requestify.request(
       process.env.URL,
       {
